@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <div className='bg-gradient-to-r from-[#000] to-slate-700 h-full w-screen '>
+    <div className='bg-gradient-to-r from-[#000] to-slate-700 h-full w-screen  overflow-x-hidden'>
 <Navbar/>
 <Login/>
     </div>
