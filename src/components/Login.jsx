@@ -13,7 +13,7 @@ function Login() {
         <form onSubmit={handleSubmit(onSubmit)} className="h-[32em] w-[90%] md:w-[30em] bg-[#111] p-8 neon-border rounded-lg">
             <h2 className="text-center text-2xl font-bold text-white mb-6">Login</h2>
             <div className="mb-4">
-                <label className="block text-white">Name</label>
+                <label className="block text-white">Adhhar No:</label>
                 <input
                     type="text"
                     {...register('name', { required: true })}
