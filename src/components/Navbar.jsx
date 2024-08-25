@@ -22,16 +22,7 @@ const Navbar = () => {
                 {/* Right side end */}
 
             </div>
-        // Navbar End
-            {/* Extended Navbar */}
-            <div className="extendednav w-screen h-auto py-[2.5vh] bg-gradient-to-r from-[#336562d3] to-[#161c0fba]  text-white  flex justify-center items-center gap-3 px-3   ">
 
-
-                <Link to='/'>Home</Link>
-                <Link to='/register'>Register</Link>
-                <Link to='/login'>Login</Link>
-
-            </div>
         </>
     )
 }
