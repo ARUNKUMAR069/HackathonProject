@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import '../index.css'
 import { FcGraduationCap } from "react-icons/fc";
 
+
 const Navbar = () => {
     return (
         // Navbar Start
@@ -18,11 +19,14 @@ const Navbar = () => {
 
 
                 {/* Right side */}
-                <img className='w-[17em]' src="https://www.aicte-india.org/sites/default/files/logo_new.png" alt="" />
+                <img className='w-[17em]' src="src\Images\logo_new.png" alt="" />
                 {/* Right side end */}
 
-            </div>
 
+
+
+            </div>
+     
         </>
     )
 }
