@@ -9,10 +9,10 @@ function Signup() {
     };
 
     return (
-        <div className='w-screen  h-auto mt-7   flex items-center justify-center  '>
+        <div className='w-screen h-auto  flex items-center justify-center   mt-3'>
             <form 
                 onSubmit={handleSubmit(onSubmit)} 
-                className="w-[90%] md:w-[75vw] bg-[#111] p-6  neon-border rounded-lg flex flex-col gap-6   "
+                className="w-[90%] md:w-[75vw] bg-[#111] p-6 py-10  neon-border rounded-lg flex flex-col gap-6   "
             >
                 <h2 className="text-center text-2xl font-bold text-white mb-6">New User Registration</h2>
 
