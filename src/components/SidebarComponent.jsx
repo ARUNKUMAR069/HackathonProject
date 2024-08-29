@@ -1,15 +1,13 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  ChartPie,
-  CheckSquare,
-  Gear,
-  HouseLine,
-  Lifebuoy,
-  PresentationChart,
-  SignOut,
-  Stack,
-  Users,
-} from 'phosphor-react';
+
+// Importing icons from react-icons
+import { AiFillHome, AiOutlineUserAdd, AiOutlineLogin, AiOutlineFileProtect, AiFillPhone } from 'react-icons/ai';
+import { MdDashboard, MdFeedback } from 'react-icons/md';
+import { BsFillFileEarmarkTextFill } from 'react-icons/bs';
+import { RiCustomerService2Fill } from 'react-icons/ri';
+
+// Importing components from Keep React UI library
 import {
   Sidebar,
   SidebarBody,
@@ -19,111 +17,159 @@ import {
   Tooltip,
   TooltipAction,
   TooltipContent,
+
 } from 'keep-react';
 
 export const SidebarComponent = () => {
   return (
-
-
-
-
-
-
-
-
-<>
-
-
-
-
-<Sidebar className="max-w-max  bg-black  h-[87.7vh]  rounded-none  border-none  bg-gradient-to-b from-[#000] to-slate-700   p-1 " >
+    <Sidebar className="max-w-max bg-black h-[100vh] rounded-none border-none bg-gradient-to-b from-[#000] to-slate-700 p-1">
       <SidebarBody className="space-y-7">
-        {/* <Link to="/" className="inline-flex items-center gap-1">
-          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white dark:bg-metal-800">
-            K.
-          </span>
-        </Link> */}
         <SidebarList className="space-y-6">
-          <SidebarItem>
-            <Tooltip placement="right" contentOffset={30}>
+          <SidebarItem >
+            <Tooltip placement="right" contentOffset={30} >
               <TooltipAction asChild>
-                <HouseLine size={20} />
+                <Link to="/">
+                  <div>
+                    <AiFillHome size={20} />
+                  </div>
+                </Link>
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Home</TooltipContent>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Home
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
             <Tooltip placement="right" contentOffset={30}>
               <TooltipAction asChild>
-                <PresentationChart size={20} />
+                <Link to="/register">
+                  <div>
+                    <AiOutlineUserAdd size={20} />
+                  </div>
+                </Link>
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Dashboard</TooltipContent>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Register
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
             <Tooltip placement="right" contentOffset={30}>
               <TooltipAction asChild>
-                <Stack size={20} />
+                <Link to="/login">
+                  <div>
+                    <AiOutlineLogin size={20} />
+                  </div>
+                </Link>
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Projects</TooltipContent>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Login
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
             <Tooltip placement="right" contentOffset={30}>
               <TooltipAction asChild>
-                <CheckSquare size={20} />
+                <Link to="/student-dashboard">
+                  <div>
+                    <MdDashboard size={20} />
+                  </div>
+                </Link>
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Tasks</TooltipContent>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Student Dashboard
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
             <Tooltip placement="right" contentOffset={30}>
               <TooltipAction asChild>
-                <ChartPie size={20} />
+                <Link to="/application-apply">
+                  <div>
+                    <BsFillFileEarmarkTextFill size={20} />
+                  </div>
+                </Link>
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Reporting</TooltipContent>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Application Apply
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
             <Tooltip placement="right" contentOffset={30}>
               <TooltipAction asChild>
-                <Users size={20} />
+                <Link to="/help-support">
+                  <div>
+                    <RiCustomerService2Fill size={20} />
+                  </div>
+                </Link>
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Users</TooltipContent>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Help & Support
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
             <Tooltip placement="right" contentOffset={30}>
               <TooltipAction asChild>
-                <Lifebuoy size={20} />
+                <Link to="/terms-conditions">
+                  <div>
+                    <AiOutlineFileProtect size={20} />
+                  </div>
+                </Link>
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Support</TooltipContent>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Terms & Conditions
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
             <Tooltip placement="right" contentOffset={30}>
               <TooltipAction asChild>
-                <Gear size={20} />
+                <Link to="/contact-us">
+                  <div>
+                    <AiFillPhone size={20} />
+                  </div>
+                </Link>
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Settings</TooltipContent>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Contact Us
+              </TooltipContent>
+            </Tooltip>
+          </SidebarItem>
+          <SidebarItem>
+            <Tooltip placement="right" contentOffset={30}>
+              <TooltipAction asChild>
+                <Link to="/feedback">
+                  <div>
+                    <MdFeedback size={20} />
+                  </div>
+                </Link>
+              </TooltipAction>
+              <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+                Feedback
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
         </SidebarList>
       </SidebarBody>
-      {/* BODY END...................................................... */}
-      <SidebarFooter className=''>
+      {/* Sidebar Footer */}
+      <SidebarFooter>
         <SidebarItem>
           <Tooltip placement="right" contentOffset={30}>
             <TooltipAction asChild>
-              <SignOut size={20} />
+              <Link to="/logout">
+                <div>
+                  <AiOutlineLogin size={20} />
+                </div>
+              </Link>
             </TooltipAction>
-            <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Log Out</TooltipContent>
+            <TooltipContent className={`  rounded-sm text-body-8 px-5 font-semibold bg-gradient-to-r from-[#614385] to-[#516395] border-none  text-black  `}>
+              Log Out
+            </TooltipContent>
           </Tooltip>
         </SidebarItem>
       </SidebarFooter>
     </Sidebar>
-</>
-
-   
   );
 };
