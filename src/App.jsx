@@ -19,7 +19,7 @@ function App() {
     },
     {
       path: "/register",
-      element: <> <Navbar />       <Signup />  </>
+      element: <> <Navbar />     <div className='flex'>  <SidebarComponent />  <Signup /></div>    </>
     },
   ])
 
