@@ -7,6 +7,7 @@ import Home from './components/Home'
 import { SidebarComponent } from './components/SidebarComponent'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { StudentDashboard } from './components/StudentDashboard'
+import TermsAndConditions from './components/TermsAndConditions'
 function App() {
   const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ function App() {
     {
       path: "/Studentdashboard",
       element: <> <Navbar />     <div className='flex'>  <SidebarComponent />  <StudentDashboard /></div>    </>
+    },
+    {
+      path: "/terms-conditions",
+      element: <> <Navbar />     <div className='flex'>  <SidebarComponent />  <TermsAndConditions /></div>    </>
     },
   ])
 
