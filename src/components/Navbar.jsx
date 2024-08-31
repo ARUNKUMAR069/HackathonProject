@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
                 {/* Right side */}
-                <img className='w-[17em]' src="https://www.aicte-jk-scholarship-gov.in/img/AICTE_logo.png" alt="" />
+       <img className='w-[17em]' src="https://www.aicte-india.org/sites/default/files/logo_new.png" alt="" />
                 {/* Right side end */}
 
 
