@@ -6,6 +6,7 @@ import Signup from './components/Signup'
 import Home from './components/Home'
 import { SidebarComponent } from './components/SidebarComponent'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { StudentDashboard } from './components/StudentDashboard'
 function App() {
   const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ function App() {
     {
       path: "/register",
       element: <> <Navbar />     <div className='flex'>  <SidebarComponent />  <Signup /></div>    </>
+    },
+    {
+      path: "/Studentdashboard",
+      element: <> <Navbar />     <div className='flex'>  <SidebarComponent />  <StudentDashboard /></div>    </>
     },
   ])
 
