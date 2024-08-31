@@ -22,7 +22,7 @@ import {
 
 export const SidebarComponent = () => {
   return (
-    <Sidebar className="max-w-max bg-black h-[100vh] rounded-none border-none bg-gradient-to-b from-[#000] to-slate-700 p-1">
+    <Sidebar className="max-w-max bg-black min-h-[100vh]  rounded-none border-none bg-gradient-to-b from-[#000] to-slate-700 p-1">
       <SidebarBody className="space-y-7">
         <SidebarList className="space-y-6">
           <SidebarItem >
