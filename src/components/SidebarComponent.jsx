@@ -70,7 +70,7 @@ export const SidebarComponent = () => {
           <SidebarItem>
             <Tooltip placement="right" contentOffset={30}>
               <TooltipAction asChild>
-                <Link to="/student-dashboard">
+                <Link to="/Studentdashboard">
                   <div>
                     <MdDashboard size={20} />
                   </div>
