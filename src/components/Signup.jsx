@@ -1,24 +1,27 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { FaUser, FaBirthdayCake, FaEnvelope, FaPhone, FaLock, FaIdCard, FaUpload } from 'react-icons/fa';
 
 function Signup() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-
+ 
     const onSubmit = (data) => {
         console.log(data);
     };
 
     return (
-        <div className='w-screen h-auto  flex items-center justify-center   mt-3'>
+        <div className='w-screen h-auto flex items-center justify-center mt-3'>
             <form 
                 onSubmit={handleSubmit(onSubmit)} 
-                className="w-[90%] md:w-[75vw] bg-[#111] p-6 py-10  neon-border rounded-lg flex flex-col gap-6   "
+                className="w-[90%] md:w-[75vw] bg-[#111] p-6 py-10 neon-border rounded-lg flex flex-col gap-6"
             >
                 <h2 className="text-center text-2xl font-bold text-white mb-6">New User Registration</h2>
 
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Full Name</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaUser className="text-white" /> Full Name
+                        </label>
                         <input
                             type="text"
                             {...register('fullName', { required: "Full name is required" })}
@@ -28,7 +31,9 @@ function Signup() {
                     </div>
 
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Date of Birth</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaBirthdayCake className="text-white" /> Date of Birth
+                        </label>
                         <input
                             type="date"
                             {...register('dob', { required: "Date of birth is required" })}
@@ -40,7 +45,9 @@ function Signup() {
 
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Email</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaEnvelope className="text-white" /> Email
+                        </label>
                         <input
                             type="email"
                             {...register('email', { 
@@ -52,11 +59,13 @@ function Signup() {
                             })}
                             className="w-full p-2 rounded-md bg-[#222] text-white border-none outline-none"
                         />
-                        {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
+                                               {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
                     </div>
 
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Mobile Number</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaPhone className="text-white" /> Mobile Number
+                        </label>
                         <input
                             type="tel"
                             {...register('mobile', { 
@@ -74,7 +83,9 @@ function Signup() {
 
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Password</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaLock className="text-white" /> Password
+                        </label>
                         <input
                             type="password"
                             {...register('password', { 
@@ -90,7 +101,9 @@ function Signup() {
                     </div>
 
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Confirm Password</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaLock className="text-white" /> Confirm Password
+                        </label>
                         <input
                             type="password"
                             {...register('confirmPassword', { 
@@ -105,7 +118,9 @@ function Signup() {
 
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Identification Number</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaIdCard className="text-white" /> Identification Number
+                        </label>
                         <input
                             type="text"
                             {...register('idNumber', { required: "Identification number is required" })}
@@ -115,7 +130,9 @@ function Signup() {
                     </div>
 
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Upload Profile Picture</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaUpload className="text-white" /> Upload Profile Picture
+                        </label>
                         <input
                             type="file"
                             {...register('profilePic', { required: "Profile picture is required" })}
@@ -127,7 +144,9 @@ function Signup() {
 
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Upload ID Proof</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaUpload className="text-white" /> Upload ID Proof
+                        </label>
                         <input
                             type="file"
                             {...register('idProof', { required: "ID proof is required" })}
@@ -137,7 +156,9 @@ function Signup() {
                     </div>
 
                     <div className="flex flex-col w-full">
-                        <label className="block text-white">Upload Academic Records</label>
+                        <label className=" text-white flex items-center gap-2">
+                            <FaUpload className="text-white" /> Upload Academic Records
+                        </label>
                         <input
                             type="file"
                             {...register('academicRecords', { required: "Academic records are required" })}
@@ -158,3 +179,5 @@ function Signup() {
 }
 
 export default Signup;
+
+
